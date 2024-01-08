@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tower Defense Game</title>
+    <style>
+        #game-container {
+    width: 1000px;
+    height: 1000px;
+    position: relative;
+    border: 1px solid #000;
+}
+
+.character, .enemy, .bullet {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%; /* Aggiungi bordi arrotondati per rendere il personaggio, i nemici e i proiettili più simili a cerchi */
+}
+
+.character {
+    background-color: green;
+    left: 490px;
+    top: 490px;
+}
+
+.enemy {
+    background-color: red;
+}
+
+.bullet {
+    background-color: yellow;
+}
+.death-screen {
+            display: none;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.8);
+            color: white;
+            text-align: center;
+            padding-top: 200px;
+            font-size: 24px;
+        }
+
+    </style>
+</head>
+<body>
+    <div id="game-container">
+        <div class="character" id="character"></div>
+        <div class="death-screen" id="death-screen">
+            <p>Game Over</p>
+            <button onclick="restartGame()">Restart</button>
+        </div>
+    </div>
+
+    <script src="game.js"></script>
+</body>
+</html>
